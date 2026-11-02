@@ -46,7 +46,7 @@ Next choices depend on the observed mechanism, not on the word "budget" in an er
 
 **Inventory:** "The old version was 20% faster; the new version is 5% faster."
 
-**Useful account:** "The older candidate changed module structure and dependency imports together; the new candidate changes structure only. That is one documented difference, not yet proof of where the extra gain came from. Compare the fixed variants and their build conditions before attributing the gap to a worse partitioning algorithm."
+**Useful account:** "The older candidate changed module structure and dependency imports together; the new candidate changes structure only. That is one documented difference, not yet proof of where the extra gain came from. The combined variant also used less CPU, while the structure-only variant used more. That makes dependency narrowing a useful next hypothesis: compare the same layout with wide and narrow imports. If narrowing recovers the work reduction, integrate that mechanism; if it does not, investigate the remaining source and measurement differences. This is a proposed discriminating test, not a causal finding from the existing ratios."
 
 If the combined changes have not been verified, describe them as a hypothesis to check, not an established explanation.
 
@@ -65,3 +65,11 @@ Proportionate explanation is part of the skill. More detail is not inherently mo
 **Useful account:** "The loader resolved a directory symlink, but our checker compared its physical path to the original alias string and rejected the same package. Compilation itself was not the failure. The proposed fix binds both representations to the same expected object while preserving the identity check; it has not yet been exercised in a real project run."
 
 Explain the consequence and the unresolved part. Routine path hashes can remain in the linked report.
+
+## Planning after repeated integration failures
+
+**Process expansion:** "Freeze another controller, audit every boundary, archive the attempt, and request permission for the next three commands."
+
+**Useful decision:** "The last attempts never reached the import optimizer: our wrapper rejected ordinary package loading. The immediate goal is to measure whether narrower imports help. Use the existing ordinary build path in a private workspace, preserve the shared dependencies, and record the changes and result. Fix the wrapper only if a capability needed for that question is actually missing. Routine repairs and retries remain within the authorized task; a changed API promise goes back to the user."
+
+This is not permission to resume a paused task or ignore an explicit constraint. It illustrates choosing machinery to serve the experiment rather than making the experiment serve the machinery.

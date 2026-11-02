@@ -32,7 +32,7 @@ Give space to information that changes the assessment of value, mechanism, confi
 
 Routine version pinning, successful cleanup, and recoverable evidence usually need a short statement or a link. Hashes, file counts, log counts, process identifiers, and call ledgers belong in supporting evidence unless they explain the actual question. Do not forbid these details when they are material to scale, integrity, cost, or a failure.
 
-Use numbers with an object, unit, baseline, and interpretation. Test counts do not describe coverage; output volume does not establish a tool's usefulness; profiling event counts do not identify a bottleneck. Retain meaningful quantitative evidence instead of replacing it with vague claims.
+Use numbers with an object, unit, baseline, and interpretation. Test counts do not describe coverage; output volume does not establish a tool's usefulness; profiling event counts do not identify a bottleneck. Retain meaningful quantitative evidence instead of replacing it with vague claims. Round numbers to the precision the evidence can support. Introduce internal labels in ordinary language, and prefer meaningful names when identifiers add no value.
 
 ## Explain the design the reader needs
 
@@ -44,7 +44,7 @@ Select detail based on the user's actual knowledge, not a universal preference f
 
 ## Interpret the evidence
 
-Connect the observation to the explanation it supports, the alternatives it leaves open, and the consequence for the goal. Keep observed facts, inferred explanations, and proposed actions distinguishable in prose; these need not be headings.
+Connect the observation to the explanation it supports, the alternatives it leaves open, and the consequence for the goal. Identify the most consequential tension first: for example, why an older combined change helped much more than the current isolated change. Use existing measurements to develop a testable explanation instead of merely listing results or repeating that they are not comparable. Keep observed facts, inferred explanations, and proposed actions distinguishable in prose; these need not be headings.
 
 A candidate compiling does not validate its selection strategy. An unsuccessful optimization does not establish that the whole direction lacks opportunity. A hot function's elapsed time is not automatically removable end-to-end time. Low CPU utilization can reflect dependencies, serial work, I/O, resource allocation, or measurement scope; it neither proves nor rules out a useful structural change.
 
@@ -52,11 +52,19 @@ When current and historical results conflict, inspect what was actually changed 
 
 ## Make the result affect the next action
 
-Choose the next action for the uncertainty it can resolve and the decision it could change. Prefer an existing source or a small discriminating check when it can answer the question. Do not require exact causal attribution before every exploratory test; explain which uncertainty a screening test can usefully reduce.
+Choose the next action for the uncertainty it can resolve and the decision it could change. Prefer an existing source or a small discriminating check when it can answer the question. Do not require exact causal attribution before every exploratory test; explain which uncertainty a screening test can usefully reduce. When useful, make a rough feasibility estimate from existing evidence, stating its assumptions. A measured subsection is not a hard upper bound on the effect of an intervention. For competing explanations, describe the smallest distinguishing comparison and how its possible outcomes would change the next choice; uncertainty should lead to a decision, not a ritual disclaimer.
 
 Distinguish fresh information from repeated failure to reach the research question. A succession of preparation fixes is engineering progress, but may leave the hypothesis untouched. Reconsider the integration boundary, experiment order, or unnecessary requirements instead of automatically adding another check or repeating the same run.
 
 Continuing, simplifying, reusing evidence, changing the hypothesis, and stopping a particular route are all valid outcomes. Do not optimize for candidate count, test count, audit layers, or positive-looking results. Avoid new experiments when current evidence is sufficient, and avoid requiring the user to inspect the repository to discover the conclusion.
+
+## Keep plans from inventing constraints
+
+Write plans around the objective, useful evidence, dependencies, and genuinely fixed requirements. Distinguish a user requirement or necessary invariant from an implementation guess, an initial resource estimate, and a convenience of the current tool. Do not silently promote the latter into non-negotiable acceptance rules. Within authorized scope, let the owner adapt ordinary implementation details and resource estimates to observed behavior; return consequential changes in goals or user-owned tradeoffs.
+
+Development, exploratory measurement, and adoption need different evidence, not a mandatory ladder of gates. A candidate can be worth measuring before full certification, provided its status is clear. Routine local fixes do not automatically require an independent audit, a new frozen package, a new approval, or rebuilding unaffected stages. Save useful code, commands, and results in the existing locations; do not create a reporting or archival subproject for every attempt. Use focused review where a concrete risk warrants it.
+
+Do not transfer example numbers into universal policy: trial counts, effect thresholds, search breadth, timeouts, and memory estimates require context. Give early experiments practical headroom and retain recoverable progress. A limit needs a purpose; it is not evidence of rigor merely because it is precise. These principles guide future authorized plans; they do not waive an existing user constraint or authorize a paused run.
 
 ## Diagnose friction proportionately
 
@@ -64,11 +72,11 @@ Separate physical resource exhaustion, concurrent-task contention, implementatio
 
 Identify a restriction's purpose and source. Shared-resource protection, runaway prevention, and fair comparisons can justify limits; unexplained strictness or repeatedly underestimated exploration budgets do not justify themselves. Early exploration should have suitable headroom and observable progress. Preserve completed work where reuse is valid. Do not infer that all checks should disappear or shared resources should be unbounded.
 
-Estimate cost from records: work lost, preparation repeated, waiting, and research questions never reached. Do not add overlapping task durations and call that elapsed delay. Mark unknown costs as unknown. Rank bottlenecks by consequences, not the number of failure messages. This is a diagnostic lens, not an additional gate on routine development.
+Estimate cost from records: work lost, preparation repeated, waiting, and research questions never reached. Do not add overlapping task durations and call that elapsed delay. Mark unknown costs as unknown. Rank bottlenecks by consequences, not the number of failure messages. Trace the origin of burdensome requirements through effective instructions, plans, actual dispatches, and code. Distinguish a written rule from an agent's stronger interpretation, and current text from what was in force at the time. Own coordinator-imposed restrictions rather than blaming workers or skills without evidence. This is a diagnostic lens, not an additional gate on routine development.
 
 ## Compose the explanation
 
-Lead with the answer or important change. Develop the supporting experiment and mechanism at the depth needed to assess it. Put traceable evidence near consequential claims, with operational detail behind links when it adds no explanatory value.
+Lead with the answer or important change. Develop the supporting experiment and mechanism at the depth needed to assess it. Put traceable evidence near consequential claims, with operational detail behind links when it adds no explanatory value. State the useful judgment first and attach the uncertainty that materially affects it; do not let a list of unverified properties overwhelm the answer. End an unresolved finding with what would resolve it when that informs the next decision.
 
 Match the organization to the question: capabilities for "what can it do", mechanism for "how was it designed", conditions for historical comparisons, and causes and costs for slow progress. Do not force identical sections or equal coverage across unrelated components. Use a table when it clarifies a real comparison, not to inventory every action.
 

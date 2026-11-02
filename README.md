@@ -14,6 +14,8 @@
 - Investigate conflicting historical results instead of guessing why they differ.
 - Distinguish resource exhaustion, work caps, implementation defects, and avoidable process friction.
 - Let negative and unexpected results change the next action.
+- Turn conflicting results into discriminating experiments without confusing accounting with causation.
+- Keep planning assumptions, resource estimates, and routine verification from becoming invented gates.
 
 The skill does not add tests, approval gates, mandatory reports, or a scheduler. It does not authorize execution or resume paused work. Operational evidence stays available; the explanation concentrates on what changes a decision.
 
