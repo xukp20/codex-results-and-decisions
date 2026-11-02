@@ -1,0 +1,4 @@
+interface:
+  display_name: "Results and Decisions"
+  short_description: "Explain results and choose evidence-informed next steps"
+  default_prompt: "Use $results-and-decisions to interpret these results, explain what matters for my goal, and assess the next decision."

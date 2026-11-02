@@ -1,0 +1,27 @@
+# Results and Decisions
+
+让实现和实验的结果改变判断与下一步，并让用户真正理解结果。
+
+这个 skill 用于代码、工具、研究和实验的结果分析与汇报。它要求先说明有用的变化、解释重要机制和证据，再决定下一步；不把执行日志、测试数量和原始数据量当成结论。
+
+## 适用场景
+
+- 解释新增能力能解决什么实际问题，以及经过什么任务验证。
+- 分析优化为什么有效或无效，比较历史与当前结果。
+- 说明用户尚未讨论过的算法、指标或实现选择。
+- 区分环境不足、实现错误、程序主动上限与不必要的流程阻塞。
+- 综合多个分支的重要进展，避免拼接等长流水账。
+
+它没有固定报告格式，不要求新增审核、实验或管理平台，也不授权启动任务、改变资源限制或恢复已暂停的工作。简单修改应简单说明；需要理解机制时则应充分解释。
+
+## 安装与使用
+
+安装命令见[英文说明](README.md#install)。按标准方式将 `skills/results-and-decisions` 链接到本机 Codex 的 skills 目录；保留已有目标，必要时重载客户端。支持自动发现和显式调用，不修改全局 AGENTS 或代理配置。
+
+示例：
+
+> 使用 $results-and-decisions 分析这批结果。先解释对目标最重要的变化，再解释实验及其含义；核对历史差异，区分事实与推断，不启动新实验。
+
+> 使用 $results-and-decisions 说明这个实现。设计是你自行选择的，请讲清关键逻辑和取舍，再说明验证结果；常规日志和保存细节放在证据中。
+
+[核心规范](skills/results-and-decisions/SKILL.md) · [实验分析参考](skills/results-and-decisions/references/experiments-and-comparisons.md) · [正反例](skills/results-and-decisions/references/examples.md)
